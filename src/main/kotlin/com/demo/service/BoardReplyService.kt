@@ -23,16 +23,12 @@ class BoardReplyService(
 
     fun write(boardReplyAddDto: BoardReplyAddDto):BoardReply{
 
-        println("aaaaaa ::: " + boardRepository.findById(boardReplyAddDto.boardId))
-//        println("aaaaaa ::: " + )
-
-
+        println("aaaaaa ::: " + boardRepository.getReferenceById(boardReplyAddDto.boardId))
 
         val reply = BoardReply(
-            board = boardRepository.findById(boardReplyAddDto.boardId).get(),
+            board = boardRepository.getReferenceById(boardReplyAddDto.boardId),
             content = boardReplyAddDto.content
         )
-
 
         return boardReplyRepository.save(reply)
 

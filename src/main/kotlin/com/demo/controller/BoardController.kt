@@ -23,7 +23,7 @@ class BoardController (
      * 게시글 전체 목록
      * @return List
      * */
-    fun list(@PageableDefault(size = 5, sort = ["id"], direction = Sort.Direction.ASC)pageable:Pageable):ResponseEntity<Page<Board>>{
+    fun list(@PageableDefault(size = 5, sort = ["boardId"], direction = Sort.Direction.ASC)pageable:Pageable):ResponseEntity<Page<Board>>{
         return ResponseEntity(boardService.findByAll(pageable), HttpStatus.OK)
     }
 

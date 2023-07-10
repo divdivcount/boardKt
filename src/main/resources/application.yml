@@ -12,7 +12,8 @@ spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     password: 1234
-    url: jdbc:mariadb://127.0.0.1:3306/board
+#    url: jdbc:mariadb://127.0.0.1:3308/board #house
+    url: jdbc:mariadb://127.0.0.1:3306/board #company
     username: root
   devtools:
     livereload:

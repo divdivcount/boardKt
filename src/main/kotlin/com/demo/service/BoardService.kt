@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional
 class BoardService(private val boardRepository: BoardRepository) {
 
 
-    fun findByAll(pageable: Pageable):Page<Board>{
+    fun findByAll(pageable: Pageable): Page<Board> {
         return boardRepository.findAll(pageable)
     }
 
